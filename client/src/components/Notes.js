@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+const moment = require('moment');
+
+
 function Notes ()  {
 
 const [notes, setNotes] = useState(
@@ -18,29 +21,38 @@ const [notes, setNotes] = useState(
        }).then(jsonRes => setNotes(jsonRes));
        })
 
+
+       const content = notes.map((note, index) =>
+
+
+       <li key={index}>
+      <article className="message mb-4 p-2 " >
+<div className="message-header ">
+<h3>{note.title}</h3>
+  <button className="delete" aria-label="delete"></button>
+</div>
+<div className="message-body">
+<p>{note.content}</p>
+<p className="is-pulled-right is-italic">{moment(note.date).format('llll')
+}</p>
+</div>
+</article>
+       </li>
+     );
+
+
     return<div className="container
-    ">
+    " >
+   <div  >
 
-
-
-  {notes.map( note =>
-
-    <div class="card mb-3, mt-3 p-2">
-  <div class="card-content">
-    <div class="content">
-
-
-<div >
- <button class="button is-large is-primary"><strong>{note.title}</strong></button>
-
-
-          <p className="content">{note.content}</p>
-</div>
-</div>
-</div>
+{content}
     </div>
-        )}
-        <br/>
+
+
+
+
+
+
           </div>
 
 

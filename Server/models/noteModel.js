@@ -2,8 +2,10 @@ const mongoose = require('mongoose');
 
 
 const notesSchema = {
+
   title: String,
-  content: String
+  content: String,
+  date: { type: Date, default: Date.now },
 
 }
 

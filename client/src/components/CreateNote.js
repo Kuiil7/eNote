@@ -42,13 +42,16 @@ function CreateNote () {
 
 
 
-    return <div className="container">
-        <h1>
-            bitch ass note
-        </h1>
+    return <div className="container p-2">
+
+        <h3>
+     Title
+        </h3>
 
         <input className="input mb-2 is-success" type="text" placeholder="Title input" name="title" onChange={handleChange} />
-
+        <h1>
+     Content
+        </h1>
         <input className="input mb-3 is-success" type="text" placeholder="Content input" name="content" onChange={handleChange} />
 
         <button className="button mr-2 is-primary" onClick={handleClick}>ADD NOTE</button>
