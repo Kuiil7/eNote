@@ -1,7 +1,7 @@
 {
   "name": "enote_v2",
   "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "description": "Ta cloud-based note app using MongoDB Atlas",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"cd server && nodemon server.js\" \"cd client && npm start\""
@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^6.0.2",
-    "moment": "^2.29.1"
+    "react-scripts": "^4.0.3"
   }
 }
