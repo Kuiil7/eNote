@@ -1,3 +1,10 @@
 li {
   list-style-type: none;
 }
+
+
+
+
+p:first-letter {
+    text-transform:capitalize;
+}

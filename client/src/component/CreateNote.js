@@ -54,10 +54,9 @@ function CreateNote () {
         </h1>
         <input className="input mb-3 is-success" type="text" placeholder="Content input" name="content" onChange={handleChange} />
 
-        <button className="button mr-2 is-primary" onClick={handleClick}>ADD NOTE</button>
+        <button className="button mr-2 is-primary" onClick={handleClick}>CREATE NOTE</button>
 
-        <button className="button mr-2 is-warning">EDIT NOTE</button>
-        <button className="button mr-2 is-danger">DELETE NOTE</button>
+        <button className="button is-danger" onClick={() => this.handleRemove()}>DELETE</button>
 
 
         <Notes />

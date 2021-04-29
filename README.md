@@ -1,9 +1,8 @@
-## eNote
+# eNote APP
+> your private cloud-based note app
 
-your private cloud-based app!
+## Created with:
+> React, Bulma, Luxon, MongoDB, Mongoose, Passport, Bcrypt, Moment, Axios, dotenv and Express.
 
-# using
- > React, Express, MongoDB, Moments, and Bulma.
-
-
- 
+### to start concurrently
+ > npm start

@@ -1,15 +1,23 @@
 {
-  "name": "enote_v2",
+  "name": "enote_passport",
   "version": "1.0.0",
-  "description": "Ta cloud-based note app using MongoDB Atlas",
+  "description": "cloud-based note app",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd server && nodemon server.js\" \"cd client && npm start\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kuiil7/eNote.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kuiil7/eNote/issues"
+  },
+  "homepage": "https://github.com/Kuiil7/eNote#readme",
   "dependencies": {
-    "concurrently": "^6.0.2",
-    "react-scripts": "^4.0.3"
+    "font-awesome": "^4.7.0"
   }
 }

@@ -1,7 +1,7 @@
 
 const express = require('express')
 const router = express.Router();
-const Note = require ("../models/noteModel");
+const Note = require ("../db/noteModel");
 
 router.route("/create").post((req,res) => {
     const title = req.body.title;
@@ -23,6 +23,7 @@ router.route("/notes").get((req, res) =>  {
 
 )
 
+/*
 router.route("/deleteNotes").get((req, res) =>  {
     Note.deleteOne()
     .then(foundNotes => res.json(foundNotes))
@@ -31,6 +32,17 @@ router.route("/deleteNotes").get((req, res) =>  {
 
 )
 
+*/
+
+router.delete('DeleteNote',  async (req, res) => {
+    try{
+        await Note.findByIdAndDelete(req.body.id);
+        return res.status(200).json({ success: true, msg: 'Note Deleted' });
+    }
+    catch(err){
+        console.error(err);
+    }
+});
 
 
 module.exports = router

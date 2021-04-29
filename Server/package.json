@@ -1,24 +1,30 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "server for eNote",
   "main": "server.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoclient": "^1.0.3",
-    "mongodb": "^3.6.6",
+    "jsonwebtoken": "^8.5.1",
     "mongodb-uri": "^0.9.7",
-    "mongoose": "^5.12.5"
+    "mongoose": "^5.12.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+  "author": "",
+  "license": "ISC"
 }
